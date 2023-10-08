@@ -30,7 +30,6 @@ class Car {
             req.body.model=req.body.model[0];
             req.body.user_id = req.user;
             req.body.image = urls;
-            console.log(req.body);
             CarModel.create(req.body)
                 .then(car => {
                     return res.status(200).json({ success: true, message: 'Car Added Successfully', car })
